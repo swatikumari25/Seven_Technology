@@ -1,0 +1,49 @@
+<nav class="navbar navbar-icon-top grey lighten-4 navbar-expand-lg fixed-top">
+  <a class="navbar-brand" routerLink="/">
+    <img class="brandimg" src="../../../assets/images/swash.png" alt="SevenTechnology">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon pt-1"><i class="fa fa-navicon"></i></span>
+  </button>
+  <div class="collapse navbar-collapse grey lighten-4" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item  ml-2 mr-2">
+        <a class="nav-link nav-text" routerLink="/shop"><strong>Shop</strong></a>
+      </li>
+    </ul>
+  </div>
+  <button type="button" class="btn peach-gradient btn-md" data-toggle="modal"
+    data-target="#basicExampleModal">Cart</button>
+  <span class="counter counter-md">{{total$ | async }}</span>
+  <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Cart Details</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <!-- <div *ngIf="total$.length === 0" class="alert alert-info">Your Cart is Empty.</div> -->
+        <div class="modal-body" *ngFor="let cartItem of totalProduct$ | async">
+          <div class="cart-item">
+            <span>{{ cartItem.name }}</span> x
+            <span>{{ cartItem.quantity }}</span>=
+            <strong>{{ cartItem.totalprice | currency:'INR' }}</strong>
+          </div>
+        </div>
+        <ul class="list-group">
+          <li class="list-group-item active">
+            <strong>Total</strong> {{ cartTotal | currency:'INR' }}
+          </li>
+        </ul>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,44 @@
+.nav-text{
+    color: #000000 !important;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.navbar{
+    max-height: 60px !important;
+    padding: 0px 10px;
+}
+
+.btn-rounded{
+    border-radius:10px;
+}
+
+.counter {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    position: relative;
+    z-index: 2;
+    margin-left: -15px;
+    border-radius: 10em;
+    padding: 1px 7px;
+    background-color: #fe1212;
+    font-size: 11px;
+    color: #fff;
+    left: auto;
+    top: -13px;
+}
+
+.btn-md{
+    border-radius: 1rem;
+    padding: 0.7rem 1.2rem;
+    font-size: .7rem;
+}
+
+.profileimg{
+    background: none;
+    border: none;
+}
+
+
+.modal-backdrop {
+    z-index:1 !important;
+}
