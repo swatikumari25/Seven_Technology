@@ -37,8 +37,12 @@
     background: none;
     border: none;
 }
-
-
-.modal-backdrop {
-    z-index:1 !important;
+.cart-backdrop {
+position: absolute;
+}
+.btn{
+   text-align:right; 
+}
+.brandimg{
+    height:40px;
 }

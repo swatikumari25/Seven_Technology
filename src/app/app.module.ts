@@ -25,6 +25,9 @@ import { ModalComponent } from './modal/modal/modal.component';
     MDBBootstrapModule.forRoot(),
 
   ],
+  entryComponents: [
+    ModalComponent,
+],
   providers: [SharedService,CartService],
   bootstrap: [AppComponent]
 })
